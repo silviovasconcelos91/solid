@@ -1,9 +1,8 @@
 package srp;
 
 public class Invoice {
-    private final String customer;
-
-    private final double amount;
+    private String customer;
+    private double amount;
 
     public Invoice(String customer, double amount) {
         this.customer = customer;
@@ -11,20 +10,8 @@ public class Invoice {
     }
 
     public double calculateTotal() {
-        double tax = amount * 0.2; // TVA à 20%
+        double tax = amount * 0.2; // TVA 20%
         return amount + tax;
-    }
-
-    public void saveToDatabase() {
-        System.out.println("Saving invoice to database...");
-    }
-
-    // Génère un PDF de la facture
-    public void print() {
-        System.out.println("Generating PDF for invoice:");
-        System.out.println("Customer: " + getCustomer());
-        System.out.println("Amount: " + getAmount());
-        System.out.println("Total (with tax): " + calculateTotal());
     }
 
     public String getCustomer() {
@@ -34,5 +21,4 @@ public class Invoice {
     public double getAmount() {
         return amount;
     }
-
 }
