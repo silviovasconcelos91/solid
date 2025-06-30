@@ -7,7 +7,7 @@ public class BirdTest {
 
     @Test
     void should_bird_fly(){
-        Bird bird = new Penguin();
-        Assertions.assertDoesNotThrow(bird::fly);
+        Bird bird = new Sparrow();
+        Assertions.assertEquals("Sparrow sound", bird.makeSound());
     }
 }
