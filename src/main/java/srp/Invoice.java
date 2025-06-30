@@ -20,7 +20,7 @@ public class Invoice {
     }
 
     // Génère un PDF de la facture
-    public void generatePDF() {
+    public void print() {
         System.out.println("Generating PDF for invoice:");
         System.out.println("Customer: " + getCustomer());
         System.out.println("Amount: " + getAmount());
